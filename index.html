@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="grid__container">
+        <header class="header">
+            <section class="header__left">
+                <i class="header__icon fa-solid fa-bars"></i>
+                <form class="header__search">
+                    <span class="search__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="search" class="search__bar" placeholder="Search">
+                </form>
+            </section>
+            <section class="header__right">
+                <img src="./resources/images/icon.svg" alt="" class="notification__icon">
+                <div class="language">
+                    <img src="./resources/images/Flag.svg" alt="" class="language__icon">
+                    <div class="dropdown">
+                        <span>English</span>
+                        <img src="./resources/images/Drop Down.svg" alt="" class="dropdown__icon">
+                        <div class="dropdown-menu">
+                            <a href="#">How</a>
+                            <a href="#">Are</a>
+                            <a href="#">You</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__profile">
+                    <img src="./resources/images/man-438081_960_720.svg" alt="" class="profile-photo">
+                    <div class="profile-data">
+                        <p class="profile-name">Moni Roy</p>
+                        <p class="profile-role">Admin</p>
+                    </div>
+                    <img src="./resources/images/More.svg" alt="" class="profile-icon">
+                </div>
+            </section>
+        </header>
+        <section class="sidebar">
+            <a class="sidebar__logo" href="#"><span class="logo-blue">Dash</span>Stak</a>
+            <section class="sidebar__menu menu">
+                <div class="menu__top">
+                    <div class="menu__item active"><a href="#">Dashboard</a></div>
+                    <div class="menu__item"><a href="#">Products</a></div>
+                    <div class="menu__item"><a href="#">Favorites</a></div>
+                    <div class="menu__item"><a href="#">Inbox</a></div>
+                    <div class="menu__item"><a href="#">Other Lists</a></div>
+                    <div class="menu__item"><a href="#">Product Stock</a></div>
+                </div>
+                <div class="menu__middle">
+                    <div class="menu__item section-title"><a>PAGES</a></div>
+                    <div class="menu__item"><a href="#">Pricing</a></div>
+                    <div class="menu__item"><a href="#">Calendar</a></div>
+                    <div class="menu__item"><a href="#">To-Do</a></div>
+                    <div class="menu__item"><a href="#">Contact</a></div>
+                    <div class="menu__item"><a href="#">Invoice</a></div>
+                    <div class="menu__item"><a href="#">UI Elements</a></div>
+                    <div class="menu__item"><a href="#">Team</a></div>
+                    <div class="menu__item"><a href="#">Table</a></div>
+                </div>
+                <div class="menu__bottom">
+                    <div class="menu__item"><a href="#">Settings</a></div>
+                    <div class="menu__item"><a href="#">Logout</a></div>
+                </div>
+            </section>
+        </section>
+        <main class="main">
+            <h2 class="dashboard__title">Dashboard</h2>
+            <section class="dashboard-grid">
+
+                    <div class="total__item">
+                        <div class="total__box">
+                            <div class="total__section total-user">
+                                <p class="total__title">Total User</p>
+                                <p class="total__number">40,689</p>
+                            </div>
+                            <img src="./resources/images/Icon1.svg" alt="" class="total__icon">     
+                        </div>
+                        <div class="total__trend">
+                            <img src="./resources/images/ic-trending-up-24px.svg" alt="">
+                            <p><span class="total__trend up">8.5%</span> Up from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="total__item">
+                        <div class="total__box">
+                            <div class="total__section total-order">
+                                <p class="total__title">Total Order</p>
+                                <p class="total__number">10293</p>
+                            </div>
+                            <img src="./resources/images/Icon2.svg" alt="" class="total__icon">     
+                        </div>
+                        <div class="total__trend">
+                            <img src="./resources/images/ic-trending-up-24px.svg" alt="">
+                            <p><span class="total__trend up">1.3%</span> Up from past week</p>
+                        </div>
+                    </div>
+                    <div class="total__item">
+                        <div class="total__box">
+                            <div class="total__section">
+                                <p class="total__title">Total Sales</p>
+                                <p class="total__number">$89,000</p>
+                            </div>
+                            <img src="./resources/images/Icon3.svg" alt="" class="total__icon">     
+                        </div>
+                        <div class="total__trend">
+                            <img src="./resources/images/ic-trending-down-24px.svg" alt="">
+                            <p><span class="total__trend down">4.3%</span> Down from yesterday</p>
+                        </div>
+                    </div>
+                    <div class="total__item">
+                        <div class="total__box">
+                            <div class="total__section">
+                                <p class="total__title">Total Pending</p>
+                                <p class="total__number">2040</p>
+                            </div>
+                            <img src="./resources/images/Icon4.svg" alt="" class="total__icon">     
+                        </div>
+                        <div class="total__trend">
+                            <img src="./resources/images/ic-trending-up-24px.svg" alt="">
+                            <p><span class="total__trend up">1.8%</span> Up from yesterday</p>
+                        </div>
+                    </div>
+                            <!-- Chart Section -->
+
+                    <section class="chart__grid">
+                        <div class="sales__date">
+                            <h2>Sales Details</h2>
+                            <div class="sales__dropdown">
+                                <button class="dropdown__toggle">
+                                    October <img src="./resources/images/Drop Down.svg" alt="" class="sales__toggle">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart__container">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+
+                    </section>
+                    <section class="deals">
+                        <div class="deals__date">
+                            <h2>Deals Details</h2>
+                            <div class="sales__dropdown">
+                                <button class="dropdown__toggle">
+                                    October <img src="./resources/images/Drop Down.svg" alt="" class="deals__toggle">
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+            </section>
+        </main>
+    </div>
+    <script src="./js/chart.js"></script>
+</body>
+</html>
