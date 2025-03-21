@@ -1,0 +1,82 @@
+/* 1. Remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Ensure smooth font scaling */
+html {
+  font-size: 16px; /* Base font size */
+  line-height: 1.2;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 3. Improve body defaults */
+body {
+ 
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background-color: #cfcfcf;
+  color: #333;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Improve media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* 5. Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* 6. Reset links */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 7. Remove button defaults */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* 8. Set strong, em, and headings for better readability */
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* 9. Remove default focus outlines but keep accessibility */
+button, a, input, textarea {
+  outline: none;
+}
+
+
+/* 10. Prevent animations and transitions on users with reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
